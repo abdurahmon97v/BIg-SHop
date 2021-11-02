@@ -6,6 +6,7 @@
 @mixin text {
   text-decoration: none;
 }
+
 @mixin flex-b {
   display: flex;
   align-items: center;
@@ -18,5 +19,34 @@
   @media screen and (max-width:$size) {
     @content ;
   }
+}
+@mixin popins($weight,$size,$linle) {
+  font-family: 'Poppins',sans-serif;
+  font-size: $size;
+  color: #222;
+  font-weight: $weight;
+  line-height: $linle;
+}
+@mixin roboto-r{
+  font-family: 'Roboto',sans-serif;
+  font-size: 13px;
+  color: #666;
+  font-weight: 400;
+  line-height: 20px;
+  
+}
+@mixin price {
+  color: #222;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  font-family: 'Poppins',sans-serif;  
+}
+@mixin sale {
+  font-family: 'Poppins',sans-serif;
+  color: #e0e0e0;
+  font-size: 10px;
+  text-decoration-line: line-through;
+  font-weight: 700;  
 }
 
