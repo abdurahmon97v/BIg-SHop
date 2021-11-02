@@ -1,0 +1,22 @@
+@mixin list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+@mixin text {
+  text-decoration: none;
+}
+@mixin flex-b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flow {
+  flex-flow: row wrap;
+}
+@mixin respon ($size) {
+  @media screen and (max-width:$size) {
+    @content ;
+  }
+}
+
