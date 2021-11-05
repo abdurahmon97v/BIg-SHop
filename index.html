@@ -18,12 +18,17 @@
   <div class="wrapper">
     <section id="site-header">
       <ul class="site-header__backets">
-        <li class="site-header__backets-item"><a class="site-header__backets-link" href="#"><i class="bi bi-house-door"></i><span>Home</span></a></li>
-        <li class="site-header__backets-item"><a class="site-header__backets-link" href="#"><i class='bx bx-heart'></i> <span class="heart">Wishlist</span></a></li>
-        <li class="site-header__backets-item backet"><a class="site-header__backets-link" href="#"><i class="bi bi-basket"></i><span><br> Cart</span></a>
+        <li class="site-header__backets-item"><a class="site-header__backets-link" href="#"><i
+              class="bi bi-house-door"></i><span>Home</span></a></li>
+        <li class="site-header__backets-item"><a class="site-header__backets-link" href="#"><i class='bx bx-heart'></i>
+            <span class="heart">Wishlist</span></a></li>
+        <li class="site-header__backets-item backet"><a class="site-header__backets-link" href="#"><i
+              class="bi bi-basket"></i><span><br> Cart</span></a>
         </li>
-        <li class="site-header__backets-item"><a class="site-header__backets-link" href="#"><i class="bi bi-gear"></i><span>Setting</span></a></li>
-        <li class="site-header__backets-item"><a class="site-header__backets-link" href="#"><i class="bi bi-caret-up-fill"></i><span>OnTop</span></a></li>
+        <li class="site-header__backets-item"><a class="site-header__backets-link" href="#"><i
+              class="bi bi-gear"></i><span>Setting</span></a></li>
+        <li class="site-header__backets-item"><a class="site-header__backets-link" href="#"><i
+              class="bi bi-caret-up-fill"></i><span>OnTop</span></a></li>
       </ul>
       <div class="site-header__container container">
         <header class="site-header__content">
@@ -31,7 +36,7 @@
             <div class="site-header__element">
               <a class="site-header__logos d-block" href="#">
                 <img class="logo-light" src="img/logo.png" alt="img">
-                <img class="logo-darc" src="https://cdn.shopify.com/s/files/1/0272/1493/8165/files/logo_dd403d90-35ae-438f-9131-4789ecc14079_300x.png?v=1603189301" alt="logo">
+                <img class="logo-darc" src="img/darc-logo.png" alt="logo">
               </a>
             </div>
             <form class="site-header__form" action="#" method="post">
@@ -42,24 +47,110 @@
             </form>
             <div class="site-header__bags">
               <ul class="site-header__lst">
-                <li class="site-header__item"><a class="site-header__link" href="#"><i class='bx bx-user'></i></a></li>
+                <li class="site-header__item"><a class="site-header__link" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" href="#"><i class='bx bx-user'></i></a></li>
                 <li class="site-header__item"><a class="site-header__link" href="#"><i class='bx bx-heart'></i></a></li>
-                <li class="site-header__item backet"><a class="site-header__link" href="#"><i class="bi bi-basket"></i></a>
+                <li class="site-header__item backet"><a class="site-header__link" href="#"><i
+                      class="bi bi-basket"></i></a>
                 </li>
-                <li class="site-header__item"><a class="site-header__link" href="#"><i class="bi bi-gear"></i></a></li>
+                <li class="site-header__item">
+                  <a class="site-header__link drop-link-open site-header__drops" href="#"><i class="bi bi-gear"></i></a>
+                  <div class="site-header__drop">
+                    <a class="site-header__drop-link" href="#"><i class="bi modal__iconse bi-gear-fill"></i> Log in</a>
+                    <a class="site-header__drop-link" href="#"><i
+                        class="bi modal__iconse bi-box-arrow-in-right"></i>Register account</a>
+                    <a class="site-header__drop-link" href="#"><i
+                        class="bi modal__iconse bi-check-circle-fill"></i>Check out</a>
+                    <a class="site-header__drop-link" href="#"><i class="bi modal__iconse bi-suit-heart-fill"></i>Check
+                      out</a>
+                    <h5 class="curency__title">Currency</h5>
+                    <ul class="curency__lst">
+                      <li class="curency__item"><a class="curency__link" href="#">USD</a></li>
+                      <li class="curency__item"><a class="curency__link" href="#">EUR</a></li>
+                      <li class="curency__item"><a class="curency__link" href="#">GBP</a></li>
+                    </ul>
+                  </div>
+                </li>
               </ul>
-              <button class="site-header__menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-list"></i></button>
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                          class='bx modal-close-bx bx-x'></i></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row modal__row">
+                        <div class="modal__inputs  col-lg-6 col-xs-12">
+                          <div class="modal__all modal-pad">
+                            <h2 class="modal__input-title">Create an account</h2>
+                            <p class="modal__input-text">No account? Create one here:</p>
+                            <form action="#" method="post">
+                              <label class="modal__in-lable"> <span class="modal__span"><i
+                                    class="bi modal__icon bi-person"></i></span> <input class="modal__input" required
+                                  autocomplete="off" placeholder="First Name" type="text"></label>
+                              <label class="modal__in-lable"> <span class="modal__span"><i
+                                    class="bi modal__icon bi-person"></i></span> <input class="modal__input" required
+                                  autocomplete="off" placeholder="Last Name" type="text"></label>
+                              <label class="modal__in-lable"> <span class="modal__span"><i
+                                    class="bi modal__icon bi-envelope"></i></span> <input class="modal__input" required
+                                  autocomplete="off" placeholder="Email" type="email"></label>
+                              <label class="modal__in-lable"> <span class="modal__span"><i
+                                    class='bx modal__icon bx-lock-open-alt'></i></span> <input class="modal__input"
+                                  required autocomplete="off" placeholder="Password" type="text"></label>
+                              <label class="modal__lable"> <input class="modal__chesk" type="checkbox"> Sign up for our
+                                newsletter</label>
+                              <div>
+                                <button class="btn btn-dark modal__input-btn" type="submit">Register</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="modal__inputs col-lg-6 col-xs-12">
+                          <div class="modal__all modal-pad2">
+                            <form action="#" method="post">
+                              <h2 class="modal__input-title">Login</h2>
+                              <p class="modal__input-text">Insert your account information:</p>
+                              <label class="modal__in-lable"> <span class="modal__span"><i
+                                    class="bi modal__icon bi-envelope"></i></span> <input class="modal__input" required
+                                  autocomplete="off" placeholder="Email" type="email"></label>
+                              <label class="modal__in-lable"> <span class="modal__span"><i
+                                    class='bx modal__icon bx-lock-open-alt'></i></span> <input class="modal__input"
+                                  required autocomplete="off" placeholder="Password" type="text"> <span
+                                  class="modal__eye"><i class="bi bi-eye-fill"></i></span></label>
+                              <p class="modal__text"><i class="bi bi-envelope-fill"></i>Forgot your <a
+                                  class="modal__link" href="#">Password ?</a></p>
+                              <button class="btn btn-dark modal__input-btn" type="submit">Login</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="site-header__menu" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-list"></i></button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header offcanvas__heared justify-content-center">
-                  <button type="button" class="offcanvas__btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                  <button type="button" class="offcanvas__btn" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                      class="bi bi-x-lg"></i></button>
                 </div>
                 <div class="offcanvas-body">
-                  <ul class="offcanvas__lst"> 
+                  <ul class="offcanvas__lst">
                     <li class="offcanvas__item"><a class="offcanvas__link" href="#">Home</a></li>
-                    <li class="offcanvas__item"><a class="offcanvas__link" href="#">All Demos<i class="bi bi-chevron-right"></i></a></li>
-                    <li class="offcanvas__item"><a class="offcanvas__link" href="#">PAGES<i class="bi bi-chevron-right"></i></a></li>
-                    <li class="offcanvas__item"><a class="offcanvas__link" href="#">CATIGORIES<i class="bi bi-chevron-right"></i></a></li>
-                    <li class="offcanvas__item"><a class="offcanvas__link" href="#">BLOG<i class="bi bi-chevron-right"></i></a></li>
+                    <li class="offcanvas__item"><a class="offcanvas__link" href="#">All Demos<i
+                          class="bi bi-chevron-right"></i></a></li>
+                    <li class="offcanvas__item"><a class="offcanvas__link" href="#">PAGES<i
+                          class="bi bi-chevron-right"></i></a></li>
+                    <li class="offcanvas__item"><a class="offcanvas__link" href="#">CATIGORIES<i
+                          class="bi bi-chevron-right"></i></a></li>
+                    <li class="offcanvas__item"><a class="offcanvas__link" href="#">BLOG<i
+                          class="bi bi-chevron-right"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -68,14 +159,1463 @@
         </header>
       </div>
     </section>
-    <section id="hero">
-      
-    </section>
+    <main>
+      <section id="site-nav">
+        <div class="site-nav__container container">
+          <nav class="site-nav__content">
+            <ul class="site-nav__lst">
+              <li class="site-nav__item">
+                <a class="site-nav__link nav-active" href="#">Home</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">All Demos <i class="bi bi-chevron-down"></i></a>
+                <div class="site-nav__demos-drops demos-drops">
+                  <div class="row">
+                    <div class="demos-drops col-xs-12 col-lg-6">
+                      <h2 class="demos-drops__title">Homepage Electronic V1</h2>
+                      <ul class="demos-drops__lst">
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 1</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 2</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 3</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 4</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 5</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 6</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 7</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 8</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 9</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="demos-drops col-xs-12 col-lg-6">
+                      <h2 class="demos-drops__title demos-drops-resopn">Homepage Electronic V2</h2>
+                      <ul class="demos-drops__lst">
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 10</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 11</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 12</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 13</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 14</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 15</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 16</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 17</a>
+                        </li>
+                        <li class="demos-drops__item"><a class="demos-drops__link" href="#">Homepage Electronic 18</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Pages <i class="bi bi-chevron-down"></i></a>
+                <ul class="site-nav__pages-drops pages-drops">
+                  <li class="pages-drops__item"><a class="pages-drops__link" href="#">Landing Page</a></li>
+                  <li class="pages-drops__item"><a class="pages-drops__link" href="#">Inner Pages</a></li>
+                  <li class="pages-drops__item"><a class="pages-drops__link" href="#">Inner Pages</a></li>
+                </ul>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Categories <i class="bi bi-chevron-down"></i></a>
+                <div class="site-nav__category-drop category-drop">
+                  <div class="category-drop__all row">
+                    <div class="category-drop__element col-lg-4 col-md-4 col-xs-12">
+                      <h2 class="category-drop__title">Collection Page</h2>
+                      <ul class="category-drop__lst">
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Without Sidebar
+                            Layout</a></li>
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Left Sidebar Layout</a>
+                        </li>
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Right Sidebar Layout</a>
+                        </li>
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Full Width Layout</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="category-drop__element col-lg-4 col-md-4 col-xs-12">
+                      <h2 class="category-drop__title category-drop-mar">Product Detail Page</h2>
+                      <ul class="category-drop__lst">
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Accordions Description
+                            1</a></li>
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Accordions Description
+                            2</a></li>
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Accordions Description
+                            3</a></li>
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Product Tab
+                            Description</a></li>
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Product Thumbnail
+                            Vertical</a></li>
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Product With Sidebar</a>
+                        </li>
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Product All
+                            Thumbnail</a></li>
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Product Grid
+                            Thumbnail</a></li>
+                      </ul>
+                    </div>
+                    <div class="category-drop__element col-lg-4 col-md-4 col-xs-12">
+                      <h2 class="category-drop__title category-drop-mar">Color variant style</h2>
+                      <ul class="category-drop__lst">
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Color variant - Text
+                            box</a></li>
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Color variant -
+                            Image</a></li>
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Color variant - Color
+                            box</a></li>
+                        <li class="category-drop__item"><a class="category-drop__link" href="#">Color variant - Dropdown
+                            box</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Blog <i class="bi bi-chevron-down"></i></a>
+                <ul class="site-nav__pages-drops pages-drops drop-left">
+                  <li class="pages-drops__item"><a class="pages-drops__link" href="#">Landing Page</a></li>
+                  <li class="pages-drops__item"><a class="pages-drops__link" href="#">Inner Pages</a></li>
+                  <li class="pages-drops__item"><a class="pages-drops__link" href="#">Inner Pages</a></li>
+                  <li class="pages-drops__item"><a class="pages-drops__link" href="#">Inner Pages</a></li>
+                  <li class="pages-drops__item"><a class="pages-drops__link" href="#">Inner Pages</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section id="hero">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item  active">
+              <div class="carousel__container container">
+                <div class="carousel__elements carousel-one">
+                  <p class="carousel__price prise-anim1">From <span class="dol">$</span><span class="num">1900</span>
+                  </p>
+                  <h2 class="carousel__title title-anim1">Vinova SmartPhone</h2>
+                  <p class="carousel__text text-anim1">Pros love iMac. So we created one just for you. It’s packed with
+                    the most powerful graphics and processors ever in a Mac, along with the most advanced storage,
+                    memory.</p>
+                  <a class="carousel__btn btn-anim1" href="#"><i class='bx bxs-shopping-bag'></i>Shop Now</a>
+                </div>
+              </div>
+              <img src="./img/slider1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item ">
+              <div class="carousel__container container">
+                <div class="carousel__elements carousel-two">
+                  <p class="carousel__price prise-anim2">From <span class="dol">$</span><span class="num">1900</span>
+                  </p>
+                  <h2 class="carousel__title title-anim2">MacBook Air</h2>
+                  <p class="carousel__text text-anim2">Powerful creativity and productivity tools live inside every Mac
+                    — apps that help you explore, connect, and work more efficiently.</p>
+                  <a class="carousel__btn btn-anim2" href="#"><i class='bx bxs-shopping-bag'></i>Shop Now</a>
+                </div>
+              </div>
+              <img src="./img/slider2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <div class="carousel__container container">
+                <div class="carousel__elements carousel-two">
+                  <p class="carousel__price prise-anim3 prise-anim1">From <span class="dol">$</span><span
+                      class="num">1900</span></p>
+                  <h2 class="carousel__title title-anim3 title-anim1">Vinova SmartPhone</h2>
+                  <p class="carousel__text text-anim3 text-anim1">All‑screen design. Longest battery life ever in an
+                    NovaPhone Fastest performance. Studio‑quality photos.</p>
+                  <a class="carousel__btn btn-anim3 btn-anim1" href="#"><i class='bx bxs-shopping-bag'></i>Shop Now</a>
+                </div>
+              </div>
+              <img src="./img/slider3.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section id="servis">
+        <div class="row spacing-20 servis__row">
+          <div class="servis__elements col-lg-3 col-md-3 text-sm-center mb-sm-20">
+            <div class="servis__imgs">
+              <a class="servis__link" href="#">
+                <img class="servis__img" src="img/servis1.jpg" alt="servis-img">
+              </a>
+            </div>
+          </div>
+          <div class="servis__elements col-lg-6 col-md-6">
+            <div class="servis__imgs">
+              <a class="servis__link" href="#">
+                <img class="servis__img" src="img/servis2.jpg" alt="servis-img">
+              </a>
+            </div>
+          </div>
+          <div class="servis__elements col-lg-3 col-md-3 text-sm-center">
+            <div class="servis__imgs">
+              <a class="servis__link" href="#">
+                <img class="servis__img" src="img/servis3.jpg" alt="servis-img">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="comforts">
+        <div class="comforts__container container">
+          <div class="comforts__row">
+            <div class="comforts__elements">
+              <div class="comforts__contents">
+                <h2 class="comforts__title">WORLDWIDE DELIVERY</h2>
+                <p class="comforts__text">We work with the biggest delivery networks. It doesn't matter where in the
+                  world you are.</p>
+              </div>
+            </div>
+            <div class="comforts__elements">
+              <div class="comforts__contents">
+                <h2 class="comforts__title">FREE SHIPPING</h2>
+                <p class="comforts__text">Stop wondering about shipping costs, what you see is what you pay.</p>
+              </div>
+            </div>
+            <div class="comforts__elements">
+              <div class="comforts__contents">
+                <h2 class="comforts__title">Money Back Guarantee</h2>
+                <p class="comforts__text">Got a problem with the product? Don't worry, we have a 30 day money back
+                  guarantee.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="comforts__line"></div>
+      </section>
+      <section id="products">
+        <div class="products__container container">
+          <h2 class="products__title">New Products</h2>
+          <p class="products__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+            praesentium. At Nulla id tincidunt ut sed semper vel Lorem condimentum ornare.</p>
+          <div class="product__all">
+            <a class="products__btn product-btn-activ" data-tab="#el1">All Product</a>
+            <a class="products__btn" data-tab="#el2">Smartphone</a>
+            <a class="products__btn" data-tab="#el3">Tablet</a>
+            <a class="products__btn" data-tab="#el4">Audio</a>
+          </div>
+          <div class="products__content">
+            <div class="pro product-block-activ" id="el1">
+              <!-- ============================================ -->
+              <div class="products__slider">
+                <div class="products__slider-content">
+                  <div class="products__slider-img">
+                    <img src="./img/product1.jpg" alt="products-img">
+                    <a class="products__slider-block" href="#">
+                      <div class="products__slider-block-img">
+                        <img class="products__slider-block-img2" src="./img/product1-1.jpg" alt="last">
+                        <div class="products__slider-search">
+                          <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                          <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                      <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                      <ul class="products__slider-stars">
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      </ul>
+                      <span class="products__slider-span">£467.10</span>
+                      <div>
+                        <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                          Now</button>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="products__slider-img">
+                    <img src="./img/product2.jpg" alt="products-img">
+                    <a class="products__slider-block slider-item-2" href="#">
+                      <div class="products__slider-block-img">
+                        <img class="products__slider-block-img2" src="./img/product2-2.jpg" alt="last">
+                        <div class="products__slider-search">
+                          <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                          <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                      <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                      <ul class="products__slider-stars">
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      </ul>
+                      <span class="products__slider-span">£467.10</span>
+                      <div>
+                        <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                          Now</button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="products__slider-content">
+                  <div class="products__slider-img">
+                    <img src="./img/product3.jpg" alt="products-img">
+                    <a class="products__slider-block" href="#">
+                      <div class="products__slider-block-img">
+                        <img class="products__slider-block-img2" src="./img/product3-3.jpg" alt="last">
+                        <div class="products__slider-search">
+                          <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                          <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                      <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                      <ul class="products__slider-stars">
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      </ul>
+                      <span class="products__slider-span">£467.10</span>
+                      <div>
+                        <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                          Now</button>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="products__slider-img">
+                    <img src="./img/product4.jpg" alt="products-img">
+                    <a class="products__slider-block slider-item-2" href="#">
+                      <div class="products__slider-block-img">
+                        <img class="products__slider-block-img2" src="./img/product2-2.jpg" alt="last">
+                        <div class="products__slider-search">
+                          <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                          <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                      <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                      <ul class="products__slider-stars">
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      </ul>
+                      <span class="products__slider-span">£467.10</span>
+                      <div>
+                        <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                          Now</button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="products__slider-content">
+                  <div class="products__slider-img">
+                    <img src="./img/product5.jpg" alt="products-img">
+                    <a class="products__slider-block" href="#">
+                      <div class="products__slider-block-img">
+                        <img class="products__slider-block-img2" src="./img/product5-5.jpg" alt="last">
+                        <div class="products__slider-search">
+                          <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                          <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                      <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                      <ul class="products__slider-stars">
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      </ul>
+                      <span class="products__slider-span">£467.10</span>
+                      <div>
+                        <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                          Now</button>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="products__slider-img">
+                    <img src="./img/product6.jpg" alt="products-img">
+                    <a class="products__slider-block slider-item-2" href="#">
+                      <div class="products__slider-block-img">
+                        <img class="products__slider-block-img2" src="./img/product3-3.jpg" alt="last">
+                        <div class="products__slider-search">
+                          <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                          <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                      <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                      <ul class="products__slider-stars">
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      </ul>
+                      <span class="products__slider-span">£467.10</span>
+                      <div>
+                        <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                          Now</button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="products__slider-content">
+                  <div class="products__slider-img">
+                    <img src="./img/xol1.jpg" alt="products-img">
+                    <a class="products__slider-block" href="#">
+                      <div class="products__slider-block-img">
+                        <img class="products__slider-block-img2" src="./img/xol2.jpg" alt="last">
+                        <div class="products__slider-search">
+                          <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                          <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                      <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                      <ul class="products__slider-stars">
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      </ul>
+                      <span class="products__slider-span">£467.10</span>
+                      <div>
+                        <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                          Now</button>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="products__slider-img">
+                    <img src="./img/xol3.jpg" alt="products-img">
+                    <a class="products__slider-block slider-item-2" href="#">
+                      <div class="products__slider-block-img">
+                        <img class="products__slider-block-img2" src="./img/xol4.jpg" alt="last">
+                        <div class="products__slider-search">
+                          <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                          <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                      <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                      <ul class="products__slider-stars">
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      </ul>
+                      <span class="products__slider-span">£467.10</span>
+                      <div>
+                        <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                          Now</button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="products__slider-content">
+                  <div class="products__slider-img">
+                    <img src="./img/product-tel6.jpg" alt="products-img">
+                    <a class="products__slider-block" href="#">
+                      <div class="products__slider-block-img">
+                        <img class="products__slider-block-img2" src="./img/product2-2.jpg" alt="last">
+                        <div class="products__slider-search">
+                          <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                          <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                      <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                      <ul class="products__slider-stars">
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      </ul>
+                      <span class="products__slider-span">£467.10</span>
+                      <div>
+                        <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                          Now</button>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="products__slider-img">
+                    <img src="./img/product3.jpg" alt="products-img">
+                    <a class="products__slider-block slider-item-2" href="#">
+                      <div class="products__slider-block-img">
+                        <img class="products__slider-block-img2" src="./img/product2-2.jpg" alt="last">
+                        <div class="products__slider-search">
+                          <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                          <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                      <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                      <ul class="products__slider-stars">
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      </ul>
+                      <span class="products__slider-span">£467.10</span>
+                      <div>
+                        <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                          Now</button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="products__slider-content">
+                  <div class="products__slider-img">
+                    <img src="./img/product5.jpg" alt="products-img">
+                    <a class="products__slider-block" href="#">
+                      <div class="products__slider-block-img">
+                        <img class="products__slider-block-img2" src="./img/product5-5.jpg" alt="last">
+                        <div class="products__slider-search">
+                          <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                          <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                      <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                      <ul class="products__slider-stars">
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      </ul>
+                      <span class="products__slider-span">£467.10</span>
+                      <div>
+                        <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                          Now</button>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="products__slider-img">
+                    <img src="./img/product6.jpg" alt="products-img">
+                    <a class="products__slider-block slider-item-2" href="#">
+                      <div class="products__slider-block-img">
+                        <img class="products__slider-block-img2" src="./img/product3-3.jpg" alt="last">
+                        <div class="products__slider-search">
+                          <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                          <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                      <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                      <ul class="products__slider-stars">
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                        <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      </ul>
+                      <span class="products__slider-span">£467.10</span>
+                      <div>
+                        <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                          Now</button>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- ============================================ -->
+            </div>
+          </div>
+          <div class="pro" id="el2">
+            <div class="products__slider">
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/product-tel1.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product-tel1-1.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/product-tel2.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product-tel3.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/product-tel4.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product-tel5.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/product-tel6.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product2-2.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/product5.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product5-5.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/product6.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product3-3.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/xol1.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/xol2.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/xol3.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/xol4.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/xol1.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/xol2.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/xol3.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product2-2.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/product5.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product5-5.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/product6.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product3-3.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pro" id="el3">
+            <div class="products__slider">
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/xol1.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/xol2.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/xol3.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/xol4.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/product3.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product3-3.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/product4.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product2-2.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/product5.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product5-5.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/product6.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product3-3.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/xol1.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/xol2.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/xol3.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/xol4.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/product2.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product2.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/product1-1.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product2-2.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/product5.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product5-5.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/product6.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product3-3.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pro" id="el4">
+            <div class="products__slider">
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/product-tel4.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product-tel5.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/product-tel6.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product2-2.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/product5.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product5-5.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/product6.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product3-3.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/xol1.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/xol2.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/xol3.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/xol4.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="products__slider-content">
+                <div class="products__slider-img">
+                  <img src="./img/xol1.jpg" alt="products-img">
+                  <a class="products__slider-block" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/xol2.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+                <div class="products__slider-img">
+                  <img src="./img/xol3.jpg" alt="products-img">
+                  <a class="products__slider-block slider-item-2" href="#">
+                    <div class="products__slider-block-img">
+                      <img class="products__slider-block-img2" src="./img/product2-2.jpg" alt="last">
+                      <div class="products__slider-search">
+                        <span class="products__slider-search-icon"><i class="bi bi-heart"></i></span>
+                        <span class="products__slider-search-icon icon-deley"><i class="bi bi-search"></i></span>
+                      </div>
+                    </div>
+                    <p class="products__slider-title">Rimond Balo Stud Cum</p>
+                    <ul class="products__slider-stars">
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                      <li class="products__slider-star"><i class="bi bi-star"></i></li>
+                    </ul>
+                    <span class="products__slider-span">£467.10</span>
+                    <div>
+                      <button class="carousel__btn product--btn" href="#"><i class="bx bxs-shopping-bag"></i>Shop
+                        Now</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="products__brands">
+            <li class="products__brand"><img src="img/icons8-apple-logo.svg" alt="brands"></li>
+            <li class="products__brand"><img src="img/icons8-dell.svg" alt="brands"></li>
+            <li class="products__brand"><img src="img/icons8-hp.svg" alt="brands"></li>
+            <li class="products__brand"><img src="img/icons8-playstation.svg" alt="brands"></li>
+            <li class="products__brand"><img src="img/icons8-xbox.svg" alt="brands"></li>
+          </ul>
+        </div>
+      </section>
+      <section id="site-baner row" style="padding-top: 70px; padding-bottom: 70px;">
+        <div class="site-baner__imgs  col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <a class="site-baner__link" href="#">
+            <img class="site-baner__img" src="./img/banner.jpg" alt="bnner">
+          </a>
+        </div>
+      </section>
+      <section id="day">
+        <div class="day__container container">
+          <h2 class="day__title">Deals Of The Day</h2>
+          <div class="day__slider">
+            <div class="day__item">
+              <a class="day__content" href="#">
+                
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

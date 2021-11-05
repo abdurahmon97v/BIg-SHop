@@ -1,0 +1,19 @@
+#servis{
+  padding-top: 10px;
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+
+.servis__imgs{
+  @include card-hover;
+}
+.servis__img{
+  width: 100% !important;
+}
+.servis__elements{
+  padding: 10px;
+}
+.servis__row{
+  justify-content: center;
+  display: flex;
+}

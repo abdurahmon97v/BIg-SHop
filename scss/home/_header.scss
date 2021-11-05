@@ -168,6 +168,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 100;
   }
   .site-header__backets-item{
     width: 70px;
@@ -218,4 +219,259 @@
     display: flex;
     justify-content: space-between;
   }
+}
+
+@include respon(992px){
+  #site-header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+
+// modal-user
+
+.modal-header{
+  border-bottom: none;
+  padding: 0;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+.modal-footer{
+  border-top: none;
+}
+.modal-body{
+  padding: 0;
+  padding: 0 15px;
+}
+.btn-close{
+  transition: all .5s ease;
+  font-size: 25px;
+  background-image: url("");
+}
+.btn-close:hover{
+  transform: rotate(180deg);
+  color: #105CAA;
+}
+.modal-dialog{
+  max-width: 830px;
+ 
+}
+.modal__inputs{
+  max-width: 414px;
+}
+
+.modal-pad{
+  padding-left: 15px;
+}
+.modal {
+
+  &__input-title {
+    @include popins(700,1rem,1.5);
+    color: #000;
+    border-bottom: 1px solid #e5e5e8;
+    position: relative;
+    padding-bottom: 8px;
+
+    &::after{
+      content: '';
+      display: block;
+      width: 170px;
+      height: 1px;
+      background: #105caa;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+    }
+  }
+
+  &__input-text {
+    font-size: 13px;
+    color: #666;
+    margin-top: 13px;
+    margin-bottom: 13px;
+  }
+
+  &__input {
+    border: 1px solid #e5e5e8;
+    padding: 0;
+    padding-left: 70px;
+    padding-right: 30px;
+    height: 46px;
+    width: 368px;
+    outline: unset;
+    font-size: 12px;
+    color: #666;
+    font-weight: 400;
+    border-radius: 2px;
+    margin-bottom: 10px;
+
+    &:hover{
+      border: 1px solid #105caa
+    }
+  }
+  &__input-btn{
+    padding: 12px 0;
+    min-width: 118px;
+    background: #222; 
+    font-weight: 600;
+    white-space: normal;
+    text-transform: uppercase;
+    font-size: 11px;   
+    margin-bottom: 10px;
+
+    &:hover{
+      background-color: #105CAA;
+      border-color: #105CAA;
+    }
+  }
+}
+.modal__chesk{
+  width: 16px;
+  height: 16px;
+  margin-right: 13px;
+}
+.modal__lable{
+  margin-top: 13px;
+  font-size: 12px;
+  color: #666;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  margin-bottom: 23px;
+}
+.modal__in-lable{
+  position: relative;
+}
+.modal__span{
+  position: absolute;
+  width: 45px;
+  height: 44px;
+  top: 1px;
+  left: 1px;
+  display: flex;
+  border-right: 1px solid #e5e5e8;
+  justify-content: center;
+  align-items: center;
+
+  &::after{
+    content: "";
+    width: 10px;
+    height: 8px;
+    position: absolute;
+    background-repeat: no-repeat;
+    right: -8px;
+    background-color: #fff;
+    background-image: url('../../img/cevron.svg');
+  }
+}
+.modal__icon{
+  color: #e5e5e8;
+}
+.modal__link{
+  text-decoration: none;
+  font-size: 13px;
+}
+.modal__text{
+  font-size: 13px;
+  margin-top: 21px;
+  margin-bottom: 29px;
+}
+.bi-envelope-fill{
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.modal__eye{
+  position: absolute;
+  width: 45px;
+  height: 44px;
+  top: 1px;
+  right: 1px;
+  display: flex;
+  background-color: #E9E9E9;
+  justify-content: center;
+  align-items: center; 
+  cursor: pointer;
+  &:hover{
+    color: #fff;
+    background-color: #105CAA;
+  }
+}
+@include respon(974px){
+  .modal__row{
+    flex-direction: column;
+  }
+  .modal-pad2{
+    padding-left: 15px;
+  }
+  .modal-pad{
+    margin-bottom: 30px;
+  }
+  .modal-dialog{
+    max-width: 428px;
+  }
+}
+@include respon(768px){
+  .modal-dialog{
+    display: none;
+  }
+}
+
+// setting modal
+.site-header__item{
+  position: relative;
+}
+.site-header__drop{
+  @include drop-other;
+  width: 260px;
+  left: -257px;
+  top: 82px;
+  padding: 7px 30px 32px 30px;
+  border-radius: 5px;
+}
+.site-header__drop-link{
+  @include drop-link;
+  font-weight: 700;
+  font-size: 10px;
+  color: #666;
+  text-transform: uppercase;
+  padding: 12px 7px;
+
+  &::before{
+    content: none
+  }
+}
+.blocks-mod{
+  @include drop-hover;
+}
+.curency {
+
+  &__title {
+    @include popins(700,12px,1.5);
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 8px;
+  }
+
+  &__lst {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 17px;
+  }
+
+  &__link {
+    @include popins(700,10px,1.5);
+    color: #666;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+.modal__iconse{
+  font-size: 15px;
+  vertical-align: middle;
+  margin-right: 10px;
+  color: #999;
 }

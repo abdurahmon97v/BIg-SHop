@@ -1,0 +1,68 @@
+#comforts{
+  z-index: 2;
+  padding-top: 40px;
+}
+.comforts {
+  
+  &__elements {
+    text-align: center;
+
+    &::before{
+      content: "";
+      width: 34px;
+      height: 29px;
+      display: inline-block;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(1){
+      &::before{
+        background-image: url('../../img/com.png');
+      }
+    }
+    &:nth-child(2){
+      &::before{
+        background-image: url('../../img/mash.png');
+      }
+    }
+    &:nth-child(3){
+      &::before{
+        background-image: url('../../img/money.png');
+      }
+    }
+  }
+
+  &__title {
+    @include popins(700,.9rem,1.5);
+    margin-top: 13px;
+    margin-bottom: 9px
+  }
+
+  &__text {
+    @include roboto-r;
+    
+  }
+}
+
+.comforts__line{
+  padding-top: 76px;
+  padding-bottom: 76px;
+
+  &::before{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #00000017;
+  }
+}
+.comforts__row{
+  display: flex;
+  justify-content: center;
+  margin-left: -30px;
+  flex-flow: row wrap;
+}
+.comforts__elements{
+  max-width: 298px;
+  margin-left: 30px;
+  margin-bottom: 15px;
+}

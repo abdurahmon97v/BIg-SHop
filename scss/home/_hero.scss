@@ -1,0 +1,361 @@
+#hero{
+  background-color: #F8F8F8;
+}
+.carousel-item{
+  position: relative;
+}
+.carousel-control-prev{
+  width: 50px;
+  height: 70px;
+  background-color: #000;
+  top: 50%;
+  margin-top: -40px;
+}
+.carousel-control-next{
+  width: 50px;
+  height: 70px;
+  background-color: #000;
+  top: 50%;
+  margin-top: -40px;
+}
+.carousel__container{
+  position: relative;
+}
+.carousel__elements{
+  position: absolute;
+}
+
+.carousel {
+
+  &__price {
+    @include popins(900,2rem,1.5);
+    color: #1477dd;
+    position: relative;
+    margin-bottom: 15px;
+
+    & .dol{
+      font-size: 1rem;
+      position: absolute;
+      top: 6px;
+      
+    }
+    & .num{
+      margin-left: 13px;
+    }
+  }
+
+  &__title {
+    @include popins(900,2rem,50px);
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 23px
+  }
+
+  &__text {
+    @include popins(400,13px,22px);
+    max-width: 492px;
+    color:#424242;
+    margin-bottom: 50px;
+  }
+
+  &__btn {
+    padding: 15px 39px;
+    border-radius: 40px;
+    background: #0869cd;
+    @include popins(700,13px,1.5);
+    color: #ffffff;
+    text-decoration: none;
+    transition: .3s ease;
+    display: inline-block;
+
+    &:hover{
+      color: #fff;
+      background-color: #105caa;
+    }
+  
+  }
+  .bxs-shopping-bag{
+    margin-right: 13px;
+    font-size: 17px;
+  }
+  
+}
+.carousel-one{
+  transform: translate(0, 255px);
+  z-index: 2;
+}
+
+.title-anim1{
+  animation-name: title1;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+@keyframes title1{
+  0%{
+    opacity: 0;
+    transform: translate(-130%, 0);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+.text-anim1{
+  animation-name: text1;
+  animation-timing-function: ease-in step-end;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+@keyframes text1{
+  0%{
+    opacity: 0;
+    transform: translate(130%,0);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+.btn-anim1{
+  animation-name: btn1;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+@keyframes  btn1{
+  0%{
+    opacity: 0;
+    transform: translate(0,-98px);
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+.prise-anim1{
+  animation-name: price1;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+@keyframes  price1{
+  0%{
+    opacity: 0;
+    transform: translate(0,98px);
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+.carousel-item{
+  height: 780px;
+}
+@include respon (1193px){
+  .carousel-item{
+    height: auto;
+  }
+  .carousel-one {
+    transform: translate(0, 22px);
+  } 
+  .carousel-control-prev{
+    width: 30px;
+    height: 40px;
+    background-color: #000;
+    top: 50%;
+    margin-top: -40px;
+  }
+  .carousel-control-next{
+    width: 30px;
+    height: 40px;
+    background-color: #000;
+    top: 50%;
+    margin-top: -40px;
+  }
+}
+@include respon(996px){
+  .carousel__title{
+    @include popins(900,1.5rem,29px);
+    margin-bottom: 13px;
+  }
+  .carousel__text{
+    margin-bottom: 20px;
+  }
+  .carousel-one {
+    transform: translate(0, 22px);
+  } 
+  .carousel__price{
+    margin-bottom: 7px;
+    @include popins(900,1rem,1.5);
+    color: #1477dd;
+  }
+}
+
+// anim2
+
+.carousel-two{
+  right: 50%;
+  top: 54px;
+  margin-right: -330px;
+  text-align: center;
+}
+.prise-anim2{
+  margin-bottom: 15px;
+}
+.title-anim2{
+  margin-bottom: 7px;
+  font-size: 2.5rem;
+}
+.text-anim2{
+  max-width: 660px;
+  font-weight: 300;
+  line-height: 30px;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+.btn-anim2{
+  background: #f8891b;
+}
+
+.prise-anim2{
+  perspective: 700vh;
+  // transform: rotateX(91deg);
+  animation-name: price2;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+
+}
+@keyframes price2{
+  0%{
+    transform: rotateX(91deg) translateY(-30px);
+  }
+  100%{
+    transform: rotateX(0deg) translateY(0);
+  }
+}
+.title-anim2{
+  // transform: translateY(-106px);
+  animation-name: title2;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  
+}
+@keyframes title2{
+  0%{
+    transform: translateY(-106px);
+    opacity: 0;
+  }
+  25%{
+    transform: translateY(-106px);
+    opacity: 0;
+  }
+  50%{
+    transform: translateY(-106px);
+    opacity: 0;
+  }
+  75%{
+    transform: translateY(-106px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.text-anim2{
+  // transform: translateY(-79px);
+  animation-name: text2;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+}
+@keyframes text2{
+  0%{
+    transform: translateY(-79px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.btn-anim2{
+  // transform: translateX(276px);
+  animation-name: btn2;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+}
+@keyframes btn2{
+  0%{
+    transform: translateX(276px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+.text-anim3{
+  max-width: 660px;
+  font-weight: 300;
+  line-height: 30px;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+.prise-anim3{
+  color: #da465b;
+}
+.title-anim3{
+  margin-bottom: 7px;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+.text-anim3{
+  margin-bottom: 30px;
+}
+.btn-anim3{
+  background-color: #da465b;
+}
+@include respon(996px){
+  .carousel__price .dol{
+    top: 0;
+  }
+  .title-anim2{
+    font-size: 1.5rem;
+  }
+  .text-anim2{
+    font-size: 13px;
+    
+  }
+  .carousel-two{
+    max-width: 450px;
+    margin-right: -225px;
+    top: 20px;
+  }
+  .title-anim3{
+    font-size: 1.5rem;
+  }
+  .text-anim3{
+    font-size: 13px;
+  }
+  .carousel-one{
+    transform: translate(32px,20px);
+  }
+}
+@include respon(595px){
+  .carousel__container{
+    display: none;
+  }
+  .carousel-control-next{
+    opacity: 0;
+  }
+  .carousel-control-prev{
+    opacity: 0;
+  }
+}
