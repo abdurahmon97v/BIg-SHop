@@ -3,3 +3,150 @@
   text-align: center;
   margin-bottom: 39px;
 }
+#day{
+  padding-bottom: 80px;
+}
+.day__content{
+  max-width: 370px;
+  display: block;
+  background-color: #F6F6F6;
+  position: relative;
+  overflow: hidden;
+}
+.day__times{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform:translateY(-50%) ;
+  z-index: 1;
+
+}
+.day__item{
+  max-width: 370px;
+}
+.day {
+
+  &__times-item {
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    
+  }
+
+  &__time {
+    text-align: center;
+    position: relative;
+
+    &::after{
+      content: "";
+      width: 45px;
+      height: 45px;
+      background-color: #FF6B57;
+      border-radius: 5px;
+      position: absolute;
+      z-index: -1;
+      top: 3px;
+      left: 3px;
+    }
+  }
+
+  &__time-title {
+    @include popins(700,13px,1.5);
+    padding-top: 5px;
+    position: relative;
+    
+    &::after{
+      content: "";
+      width: 50%;
+      height: 1px;
+      background-color: #B4B4B4;
+      position: absolute;
+      bottom: 0;
+      left: 13px;
+    }
+
+  }
+  &__time-text{
+    @include roboto-r;
+  }
+}
+
+.day__img{
+  position: absolute;
+  top: 63px;
+  opacity: 0;
+  transition: all .5s ease;
+}
+.day__content:hover .day__img-prim{
+  opacity: 0;
+}
+.day__content:hover .day__img{
+  opacity: 1;
+  top: 0;
+}
+.day {
+
+  &__des-link {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    @include popins(500,13px,1.5);
+    text-decoration: none;
+    text-align: center;
+    color: #444;
+
+    &:hover{
+      color: #115DAA;
+    }
+  }
+
+  &__des-prises {
+    margin-bottom: 19px;
+    text-align: center;
+  }
+
+  &__des-span {
+    @include popins(700,13px,1.5);
+    color: #222;
+  }
+
+  &__des-prise {
+    margin-left: 10px;
+    @include sale;
+  }
+
+  &__des-btn {
+    text-decoration: none;
+    background: #f0f0f0;
+    padding: 11px 35px;
+    border-radius: 40px;
+    @include roboto-r;
+    font-weight: 700;
+    font-size: 10px;
+    
+    &:hover{
+      background-color: #115DAA;
+      color: #fff;
+    }
+  }
+}
+.day__des{
+  text-align: center;
+}
+.bi-chevron-down{
+  margin-right: 7px;
+}
+.day__item{
+  margin-left: 18px;
+  margin-bottom: 10px;
+}
+.day__item .products__slider-search{
+  z-index: 5;
+  bottom: -13px;
+}
+.day__content:hover .products__slider-search-icon{
+  top: 0;
+}
+
